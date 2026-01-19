@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Velocity Sales Lead Board</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      @keyframes pulse-red {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.1); opacity: 0.7; }
+      }
+      @keyframes drop-success {
+        0% { transform: translateY(-10px); opacity: 0.5; border-color: #10b981; }
+        100% { transform: translateY(0); opacity: 1; border-color: inherit; }
+      }
+      @keyframes highlight-fade {
+        0% { background-color: #f0fdf4; }
+        100% { background-color: white; }
+      }
+      .animate-pulse-red {
+        animation: pulse-red 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      .animate-drop {
+        animation: drop-success 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .animate-highlight {
+        animation: highlight-fade 1.5s ease-out;
+      }
+      
+      /* Hide scrollbars for a cleaner mobile look */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      body {
+        background-color: #050914;
+        /* Prevent elastic scroll on mobile */
+        overscroll-behavior-y: none;
+        overflow: hidden;
+      }
+      #root {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@dnd-kit/sortable": "https://esm.sh/@dnd-kit/sortable@^10.0.0",
+    "@dnd-kit/core": "https://esm.sh/@dnd-kit/core@^6.3.1",
+    "@dnd-kit/utilities": "https://esm.sh/@dnd-kit/utilities@^3.2.2"
+  }
+}
+</script>
+</head>
+<body class="bg-[#050914] text-slate-100 h-screen overflow-hidden">
+    <div id="root"></div>
+</body>
+</html>

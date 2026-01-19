@@ -1,0 +1,5 @@
+{
+  "name": "Velocity Sales Lead Board",
+  "description": "A high-performance Kanban-style sales funnel manager with 'rotting' card detection, drag-and-drop capability, and role-based filtering for maximum speed-to-lead efficiency.",
+  "requestFramePermissions": []
+}
